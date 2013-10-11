@@ -40,9 +40,6 @@
             <xsd:element name="GetPersonResponse">
               <xsd:complexType>
                     <xsd:sequence>
-                        <xsd:element name="personId" type="xsd:string"/>
-                        <xsd:element name="ssn" type="xsd:string"/>
-                        <xsd:element name="name" type="xsd:string"/>
                     </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
