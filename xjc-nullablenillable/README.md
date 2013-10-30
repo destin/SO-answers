@@ -1,13 +1,8 @@
-xjc-javadoc-plugin
+xjc-nullablenillable
 ==================
 
-XJC javadoc plugin that adds javadocs based on xsd:documentation element.
+XJC javadoc plugin that adds required=false to @XmlElementRef for nullable and nillable elements.
 
-Versions
---------
-0.0.2 Plugin adds javadocs to generated enum types
-
-0.0.1 Initial version - plugin adds javadocs to fields of properties of complex types.
 
 Plugin usage
 ============
@@ -18,14 +13,14 @@ the sources and build the project locally.
 XJC
 ---
 
-xjc -classpath /path/to/xjc-javadoc-*.jar -Xjavadoc /path/to/xsd
+xjc -classpath /path/to/xjc-javadoc-*.jar -Xnullablenillable /path/to/xsd
 
 CXF cxf-codegen-plugin
 -------------
 
 There are two things needed:
-* Dependency to xjc-javadoc-plugin has to be added to cxf-codegen-plugin
-* Extra xjc argument -xjc-Xjavadoc has to be added
+* Dependency to xjc-nullablenillable has to be added to cxf-codegen-plugin
+* Extra xjc argument -xjc-Xnullablenillable has to be added
 
 Sample configuration:
 
@@ -42,7 +37,7 @@ Sample configuration:
 						<wsdlOption>
 							<wsdl>src/main/resources/CustomerService.wsdl</wsdl>
 							<extraargs>
-								<extraarg>-xjc-Xjavadoc</extraarg>
+								<extraarg>-xjc-Xnullablenillable</extraarg>
 							</extraargs>
 						</wsdlOption>
 					</wsdlOptions>
@@ -55,8 +50,8 @@ Sample configuration:
 		<dependencies>
 			<dependency>
 				<groupId>org.dpytel.jaxb</groupId>
-				<artifactId>xjc-javadoc</artifactId>
-				<version>${xjc-javadoc-version}</version>
+				<artifactId>xjc-nullablenillable</artifactId>
+				<version>${xjc-nullablenillable-version}</version>
 			</dependency>
 		</dependencies>
 	</plugin>
