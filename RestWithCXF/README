@@ -1,0 +1,34 @@
+REST Web Service Using CXF - Beginner's Tutorial - fixed source code
+--------------------------------------------------------------------
+
+This is a source code for the following article:
+http://java.dzone.com/articles/rest-web-service-using-cxf
+
+I am not the author of the tutorial. It seems that original article and original source code is missing.
+
+The CXF configuration has been adapted to work with CXF 2.7.8.
+
+Prerequisites
+=============
+
+In order to get this code working the following jars has to be extracted from CXF distro 
+(http://www.apache.org/dyn/closer.cgi?path=/cxf/2.7.8/apache-cxf-2.7.8.zip):
+
+aopalliance-1.0.jar
+commons-logging-1.1.1.jar
+cxf-2.7.8.jar
+FastInfoset-1.2.13.jar
+javax.ws.rs-api-2.0-m10.jar
+jettison-1.3.4.jar
+neethi-3.0.2.jar
+spring-aop-3.0.7.RELEASE.jar
+spring-asm-3.0.7.RELEASE.jar
+spring-beans-3.0.7.RELEASE.jar
+spring-context-3.0.7.RELEASE.jar
+spring-core-3.0.7.RELEASE.jar
+spring-expression-3.0.7.RELEASE.jar
+spring-web-3.0.7.RELEASE.jar
+wsdl4j-1.6.3.jar
+xmlschema-core-2.0.3.jar
+
+to WebContent/WEB-INF/lib directory.
