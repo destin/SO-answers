@@ -8,6 +8,11 @@ I am not the author of the tutorial. It seems that original article and original
 
 The CXF configuration has been adapted to work with CXF 2.7.8.
 
+The project is an Eclipse project using WTP. In order to build it and use it you need to import it to 
+Eclipse or convert it to appropriate format for another IDE.
+
+The code was tested on Tomcat 7 but should be running on every other application server.
+
 Prerequisites
 =============
 
