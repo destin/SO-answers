@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+	<title>Some page</title>
+</h:head>
+<h:body>
+
+
+	<h:form id="pizzasForm">
+		<ui:repeat var="result" value="#{pizzaResult.results}" varStatus="loop">
+
+			<ul>
+				<li><p>Name: #{result.pizza.name}</p></li>
+				<li><p>ID: #{result.pizza.pizzaID}</p></li>
+				<li>
+					<p>Sizes:</p> <h:selectOneRadio id="chosenSize"
+						value="#{pizzaResult.chosenSize[loop.index]}">
+						<f:selectItems value="#{result.sizeList}" var="size"
+							itemLabel="#{size.diameter}" itemValue="#{size.sizeID}" />
+					</h:selectOneRadio>
+				</li>
+				<li>
+					<p>Quantity:</p> <h:selectOneListbox id="chosenQuantity"
+						value="#{pizzaResult.chosenQuantity[loop.index]}" size="1">
+						<f:selectItem id="quantity1" itemLabel="1x" itemValue="1" />
+						<f:selectItem id="quantity2" itemLabel="2x" itemValue="2" />
+					</h:selectOneListbox>
+				</li>
+				<li><h:commandButton value="add to cart"
+						action="#{pizzaResult.addToCart(loop.index)}"/></li>
+			</ul>
+
+		</ui:repeat>
+	</h:form>
+	<ui:debug hotkey="X" />
+</h:body>
+</html>
